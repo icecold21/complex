@@ -10,7 +10,7 @@ script:
   - docker run jonathanwylliem/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t jonathanwylliem/multi-client
+  - docker build -t jonathanwylliem/multi-client ./client
   - docker build -t jonathanwylliem/multi-nginx ./nginx
   - docker build -t jonathanwylliem/multi-server ./server
   - docker build -t jonathanwylliem/multi-worker ./worker
